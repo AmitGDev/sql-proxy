@@ -74,10 +74,13 @@
   <ItemGroup>
     <ClCompile Include="CommVaultPostgres.cpp" />
     <ClCompile Include="ConnectToDbTest.cpp" />
+    <ClCompile Include="PolicyEngine.cpp" />
+    <ClCompile Include="PolicyEngineTest.cpp" />
     <ClCompile Include="SqlAnalyzer.cpp" />
     <ClCompile Include="SqlAnalyzerTest.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="PolicyEngine.hpp" />
     <ClInclude Include="SqlAnalyzer.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
