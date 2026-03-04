@@ -1,0 +1,64 @@
+{
+  "rules": [
+    {
+      "tag": "PII.Email",
+      "patterns": [
+        "EMAIL",
+        "EMAIL_ADDRESS",
+        "EMAILADDRESS",
+        "USER_EMAIL",
+        "CONTACT_EMAIL"
+      ]
+    },
+    {
+      "tag": "PII.Phone",
+      "patterns": [
+        "PHONE",
+        "PHONE_NUMBER",
+        "PHONENUMBER",
+        "MOBILE",
+        "MOBILE_NUMBER",
+        "CONTACT_PHONE"
+      ]
+    },
+    {
+      "tag": "PII.SSN",
+      "patterns": [
+        "SSN",
+        "SOCIAL_SECURITY",
+        "SOCIAL_SECURITY_NUMBER",
+        "TAX_ID",
+        "NATIONAL_ID"
+      ]
+    },
+    {
+      "tag": "PII.DOB",
+      "patterns": [
+        "DOB",
+        "DATE_OF_BIRTH",
+        "BIRTHDATE",
+        "BIRTH_DATE"
+      ]
+    },
+    {
+      "tag": "PII.CreditCard",
+      "patterns": [
+        "CREDIT_CARD",
+        "CARD_NUMBER",
+        "CC_NUMBER",
+        "PAN"
+      ]
+    },
+    {
+      "tag": "PII.Address",
+      "patterns": [
+        "ADDRESS",
+        "STREET_ADDRESS",
+        "HOME_ADDRESS",
+        "BILLING_ADDRESS",
+        "POSTAL_CODE",
+        "ZIP_CODE"
+      ]
+    }
+  ]
+}

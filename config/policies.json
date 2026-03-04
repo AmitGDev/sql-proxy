@@ -1,0 +1,63 @@
+{
+  "rules": [
+    {
+      "comment": "--- Global defaults ---",
+      "user": "*",
+      "table": "*",
+      "statementTypes": [],
+      "effect": "BLOCK"
+    },
+
+    {
+      "comment": "--- alice: full read access on all tables ---",
+      "user": "alice",
+      "table": "*",
+      "statementTypes": [ "SELECT" ],
+      "effect": "ALLOW"
+    },
+    {
+      "comment": "--- alice: can write to orders and order_items only ---",
+      "user": "alice",
+      "table": "orders",
+      "statementTypes": [ "INSERT", "UPDATE", "DELETE" ],
+      "effect": "ALLOW"
+    },
+    {
+      "comment": "--- alice: explicitly blocked from DDL ---",
+      "user": "alice",
+      "table": "*",
+      "statementTypes": [ "CREATE", "ALTER", "DROP" ],
+      "effect": "BLOCK"
+    },
+
+    {
+      "comment": "--- bob: read-only on products and orders ---",
+      "user": "bob",
+      "table": "products",
+      "statementTypes": [ "SELECT" ],
+      "effect": "ALLOW"
+    },
+    {
+      "comment": "--- bob: can read orders ---",
+      "user": "bob",
+      "table": "orders",
+      "statementTypes": [ "SELECT" ],
+      "effect": "ALLOW"
+    },
+    {
+      "comment": "--- bob: explicitly blocked from customers (PII) ---",
+      "user": "bob",
+      "table": "customers",
+      "statementTypes": [],
+      "effect": "BLOCK"
+    },
+
+    {
+      "comment": "--- admin: full access everywhere ---",
+      "user": "admin",
+      "table": "*",
+      "statementTypes": [],
+      "effect": "ALLOW"
+    }
+  ]
+}
