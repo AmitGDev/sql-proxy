@@ -1,0 +1,8 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="CommVaultPostgres.vcxproj" Id="5395b45a-ddb4-4117-93b3-a5778c35b746">
+    <BuildType Project="Release" />
+  </Project>
+</Solution>
