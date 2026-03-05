@@ -72,6 +72,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Classifier.cpp" />
     <ClCompile Include="CommVaultPostgres.cpp" />
     <ClCompile Include="ConnectToDbTest.cpp" />
     <ClCompile Include="PolicyEngine.cpp" />
@@ -80,6 +81,7 @@
     <ClCompile Include="SqlAnalyzerTest.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Classifier.hpp" />
     <ClInclude Include="PolicyEngine.hpp" />
     <ClInclude Include="SqlAnalyzer.hpp" />
   </ItemGroup>

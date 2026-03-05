@@ -33,12 +33,18 @@
     <ClCompile Include="PolicyEngineTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Classifier.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SqlAnalyzer.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PolicyEngine.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Classifier.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
