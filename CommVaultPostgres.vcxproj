@@ -73,6 +73,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CommVaultPostgres.cpp" />
+    <ClCompile Include="ConnectToDbTest.cpp" />
+    <ClCompile Include="SqlAnalyzer.cpp" />
+    <ClCompile Include="SqlAnalyzerTest.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SqlAnalyzer.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
