@@ -75,6 +75,7 @@
     <ClCompile Include="AuditLogger.cpp" />
     <ClCompile Include="Classifier.cpp" />
     <ClCompile Include="DbExecutor.cpp" />
+    <ClCompile Include="ExecuteTest.cpp" />
     <ClCompile Include="FullPipelineTest.cpp" />
     <ClCompile Include="CommVaultPostgres.cpp" />
     <ClCompile Include="ConnectToDbTest.cpp" />
