@@ -79,11 +79,13 @@
     <ClCompile Include="PolicyEngineTest.cpp" />
     <ClCompile Include="SqlAnalyzer.cpp" />
     <ClCompile Include="SqlAnalyzerTest.cpp" />
+    <ClCompile Include="UserManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Classifier.hpp" />
     <ClInclude Include="PolicyEngine.hpp" />
     <ClInclude Include="SqlAnalyzer.hpp" />
+    <ClInclude Include="UserManager.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
