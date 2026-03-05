@@ -73,6 +73,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Classifier.cpp" />
+    <ClCompile Include="DbExecutor.cpp" />
     <ClCompile Include="FullPipelineTest.cpp" />
     <ClCompile Include="CommVaultPostgres.cpp" />
     <ClCompile Include="ConnectToDbTest.cpp" />
@@ -84,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Classifier.hpp" />
+    <ClInclude Include="DbExecutor.hpp" />
     <ClInclude Include="PolicyEngine.hpp" />
     <ClInclude Include="SqlAnalyzer.hpp" />
     <ClInclude Include="UserManager.hpp" />
