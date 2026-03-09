@@ -1,0 +1,20 @@
+{
+  "tables": [
+    {
+      "name": "customers",
+      "columns": ["id", "name", "email", "phone"]
+    },
+    {
+      "name": "orders",
+      "columns": ["id", "customer_id", "created_at"]
+    },
+    {
+      "name": "order_items",
+      "columns": ["id", "order_id", "product_id", "quantity", "unit_price"]
+    },
+    {
+      "name": "products",
+      "columns": ["id", "name", "price"]
+    }
+  ]
+}
