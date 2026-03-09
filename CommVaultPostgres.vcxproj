@@ -84,6 +84,7 @@
     <ClCompile Include="SqlAnalyzer.cpp" />
     <ClCompile Include="SqlAnalyzerTest.cpp" />
     <ClCompile Include="UserManager.cpp" />
+    <ClCompile Include="Utility.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AuditLogger.hpp" />
@@ -92,6 +93,7 @@
     <ClInclude Include="PolicyEngine.hpp" />
     <ClInclude Include="SqlAnalyzer.hpp" />
     <ClInclude Include="UserManager.hpp" />
+    <ClInclude Include="Utility.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
