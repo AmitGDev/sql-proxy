@@ -387,24 +387,33 @@ All names are stored and compared case-insensitively (normalised to uppercase). 
 
 ## Data Classification
 
-Classification is performed by `Classifier` based on column names. It does not inspect data values.
+Classification is performed by `Classifier` based on column names. It does not inspect data values. Despite the current rules being PII-focused, the `Classifier` is general-purpose - tags are arbitrary strings and the design is not PII-specific.
 
 ### Classification Rules
 
-Rules are loaded at startup from `config/classifier.json`. Each rule maps a list of column name patterns to a tag string. Adding a new PII category requires only a config change - no recompile. If `classifier.json` is missing, `LoadDefaults()` provides the built-in fallback rules below.
+Rules are loaded at startup from `config/classifier.json`. Each rule maps a list of column name patterns to a tag string. Tags are arbitrary - any classification scheme can be expressed without touching any code. If `classifier.json` is missing, `LoadDefaults()` provides the built-in fallback rules below.
 
 | Column Name Pattern | Tag |
 |--------------------|-----|
 | `email`, `email_address`, `emailaddress`, `user_email`, `contact_email` | `PII.Email` |
 | `phone`, `phone_number`, `phonenumber`, `mobile`, `mobile_number`, `contact_phone` | `PII.Phone` |
 
-The `classifier.json` format:
+The `classifier.json` format supports any tag vocabulary - PII categories, regulatory frameworks, sensitivity levels, or domain-specific labels. A single column can match multiple rules and accumulate multiple tags (deduplicated automatically):
+
 ```json
 { "rules": [
-  { "patterns": ["EMAIL", "EMAIL_ADDRESS"], "tag": "PII.Email" },
-  { "patterns": ["PHONE", "MOBILE"],        "tag": "PII.Phone"  }
+  { "patterns": ["EMAIL", "EMAIL_ADDRESS"],       "tag": "PII.Email"  },
+  { "patterns": ["PHONE", "MOBILE"],              "tag": "PII.Phone"  },
+  { "patterns": ["SSN", "SOCIAL_SECURITY"],       "tag": "PII.SSN"    },
+  { "patterns": ["SALARY", "COMPENSATION"],       "tag": "FINANCIAL"  },
+  { "patterns": ["DIAGNOSIS", "CONDITION"],       "tag": "HIPAA"      },
+  { "patterns": ["EMAIL", "DOB", "NATIONAL_ID"],  "tag": "GDPR"       },
+  { "patterns": ["CARD_NUMBER", "CVV"],           "tag": "PCI-DSS"    },
+  { "patterns": ["NOTES", "COMMENTS"],            "tag": "RESTRICTED" }
 ] }
 ```
+
+In this example, an `email` column would accumulate both `PII.Email` and `GDPR` tags. All matched tags appear in the audit record.
 
 ### Wildcard Expansion
 
